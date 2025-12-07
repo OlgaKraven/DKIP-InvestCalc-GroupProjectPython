@@ -1,0 +1,8 @@
+{
+  "project_name": "Аналитическая платформа (BI и Big Data)",
+  "capex": 110000,
+  "opex": 40000,
+  "effects": 240000,
+  "period_months": 36,
+  "discount_rate_percent": null
+}

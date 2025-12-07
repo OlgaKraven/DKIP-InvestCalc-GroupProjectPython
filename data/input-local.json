@@ -1,0 +1,8 @@
+{
+  "project_name": "CRM локально",
+  "capex": 150000,
+  "opex": 30000,
+  "effects": 180000,
+  "period_months": 36,
+  "discount_rate_percent": null
+}

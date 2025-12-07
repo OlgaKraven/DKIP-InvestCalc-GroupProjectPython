@@ -1,0 +1,8 @@
+{
+  "project_name": "HRM система (кадровый учет и автоматизация HR-процессов)",
+  "capex": 90000,
+  "opex": 25000,
+  "effects": 160000,
+  "period_months": 36,
+  "discount_rate_percent": null
+}

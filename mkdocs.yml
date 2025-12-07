@@ -1,0 +1,221 @@
+site_name: InvestCalc — Документация проекта
+site_description: Учебный групповой проект «InvestCalc — Инвестиционный аналитик ИС».
+site_author: DataForge / команда проекта
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  features:
+    - content.code.copy     # кнопка "копировать"
+    - content.image.zoom    # zoom картинок
+    - navigation.top        # кнопка «наверх»
+    - navigation.tracking   # подсветка активного пункта в TOC
+    - toc.follow            # правый TOC «едет» за прокруткой
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - js/mermaid-init.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+nav:
+    - Главная: README.md
+    - Описание проекта:
+      - 00. Введение и предметная область:
+          - Архитектура InvestCalc: 00-intro/architecture.md
+          - Постановка задачи: 00-intro/assignment.md
+          - Предметная область: 00-intro/domain.md
+          - Главная (обзор проекта): 00-intro/index.md
+          - Обзор решения: 00-intro/overview.md
+          - Бизнес-проблема: 00-intro/problem.md
+          - Сценарии использования: 00-intro/scenarios.md
+
+      - 01. Планирование проекта:
+          - Видение продукта: 01-planning/vision.md
+          - Stakeholders (общий обзор): 01-planning/stakeholders.md
+          - Карта стейкхолдеров: 01-planning/stakeholder-map.md
+          - Портреты стейкхолдеров: 01-planning/stakeholder-personas.md
+          - Коммуникационный план: 01-planning/communication-plan.md
+          - Проектная хартия (charter): 01-planning/project-charter.md
+          - План проекта: 01-planning/project-plan.md
+          - Диаграмма Ганта: 01-planning/gantt.md
+          - Roadmap: 01-planning/roadmap.md
+          - Журнал совещаний (шаблон): 01-planning/meeting-notes-template.md
+          - Реестр рисков: 01-planning/risk-register.md
+          - WBS (структура работ): 01-planning/work-breakdown-structure.md
+
+      - 02. Требования и ТЗ:
+          - Спецификация требований: 02-requirements/requirements-spec.md
+          - Функциональные требования: 02-requirements/functional.md
+          - Нефункциональные требования: 02-requirements/non-functional.md
+          - Бизнес-правила: 02-requirements/business-rules.md
+          - Требования к данным: 02-requirements/data-requirements.md
+          - Требования к UI: 02-requirements/ui-requirements.md
+          - Use-cases: 02-requirements/use-cases.md
+          - Термины и глоссарий: 02-requirements/glossary.md
+          - Техническое задание (ТЗ): 02-requirements/tz.md
+
+      - 03. Архитектура и ADR:
+          - Руководство по ADR: 03-architecture/ADR-guide.md
+          - ADR-01 — Architectural Vision And Constraints: 03-architecture/adr-01-architectural-vision-and-constraints.md
+          - ADR-01 — Tech Stack: 03-architecture/adr-01-tech-stack.md
+          - ADR-02 — Architecture Style Modular Monolith: 03-architecture/adr-02-architecture-style-modular-monolith.md
+          - ADR-02 — Deployment: 03-architecture/adr-02-deployment.md
+          - ADR-03 — Domain Separation Api Domain Services Infrastructure: 03-architecture/adr-03-domain-separation-api-domain-services-infrastructure.md
+          - ADR-03 — Folder Structure: 03-architecture/adr-03-folder-structure.md
+          - ADR-04 — Models Validation: 03-architecture/adr-04-models-validation.md
+          - ADR-04 — Tech Stack Python Fastapi: 03-architecture/adr-04-tech-stack-python-fastapi.md
+          - ADR-05 — Business Logic Layer: 03-architecture/adr-05-business-logic-layer.md
+          - ADR-06 — Data Contracts And Json Schema: 03-architecture/adr-06-data-contracts-and-json-schema.md
+          - ADR-06 — Stateless Architecture: 03-architecture/adr-06-stateless-architecture.md
+          - ADR-07 — Financial Formula Engine Architecture: 03-architecture/adr-07-financial-formula-engine-architecture.md
+          - ADR-07 — Reporting Module: 03-architecture/adr-07-reporting-module.md
+          - ADR-08 — Error Model And Exception Taxonomy: 03-architecture/adr-08-error-model-and-exception-taxonomy.md
+          - ADR-08 — Json Scenarios: 03-architecture/adr-08-json-scenarios.md
+          - ADR-09 — C4 Model Definition: 03-architecture/adr-09-c4-model-definition.md
+          - ADR-09 — Ci Cd: 03-architecture/adr-09-ci-cd.md
+          - ADR-10 — Rest Api Design Principles: 03-architecture/adr-10-rest-api-design-principles.md
+          - ADR-10 — Testing Strategy: 03-architecture/adr-10-testing-strategy.md
+          - ADR-11 — Api Versioning Strategy: 03-architecture/adr-11-api-versioning-strategy.md
+          - ADR-11 — Security: 03-architecture/adr-11-security.md
+          - ADR-12 — Request Response Validation: 03-architecture/adr-12-request-response-validation.md
+          - ADR-12 — Scalability: 03-architecture/adr-12-scalability.md
+          - ADR-13 — Api Error Handling: 03-architecture/adr-13-api-error-handling.md
+          - ADR-13 — Logging Monitoring: 03-architecture/adr-13-logging-monitoring.md
+          - ADR-14 — Api Observability And Logging: 03-architecture/adr-14-api-observability-and-logging.md
+          - ADR-14 — Extension Path: 03-architecture/adr-14-extension-path.md
+          - ADR-15 — Openapi Documentation Strategy: 03-architecture/adr-15-openapi-documentation-strategy.md
+          - ADR-16 — Security Model: 03-architecture/adr-16-security-model.md
+          - ADR-17 — Input Validation And Sanitization: 03-architecture/adr-17-input-validation-and-sanitization.md
+          - ADR-18 — Security Logging: 03-architecture/adr-18-security-logging.md
+          - ADR-19 — Secrets And Env Management: 03-architecture/adr-19-secrets-and-env-management.md
+          - ADR-20 — Threat Modeling: 03-architecture/adr-20-threat-modeling.md
+          - ADR-21 — Ci Cd Architecture: 03-architecture/adr-21-ci-cd-architecture.md
+          - ADR-22 — Docker Image Architecture: 03-architecture/adr-22-docker-image-architecture.md
+          - ADR-23 — Deployment Strategy: 03-architecture/adr-23-deployment-strategy.md
+          - ADR-24 — Automated Testing Pipeline: 03-architecture/adr-24-automated-testing-pipeline.md
+          - ADR-25 — Observability Logs Metrics Traces: 03-architecture/adr-25-observability-logs-metrics-traces.md
+          - ADR-26 — Documentation Infrastructure: 03-architecture/adr-26-documentation-infrastructure.md
+          - ADR-27 — Testing Strategy: 03-architecture/adr-27-testing-strategy.md
+          - ADR-28 — Contract Testing: 03-architecture/adr-28-contract-testing.md
+          - ADR-29 — Performance Testing Strategy: 03-architecture/adr-29-performance-testing-strategy.md
+          - ADR-30 — Release And Regression Testing And Quality Model: 03-architecture/adr-30-release-and-regression-testing-and-quality-model.md
+          - ADR — индекс: 03-architecture/adr-index.md
+          - Обзор архитектуры: 03-architecture/architecture-overview.md
+          - Архитектурные решения (обзор): 03-architecture/architecture-decisions.md
+          - Архитектурные риски: 03-architecture/architecture-risks.md
+          - C4 — контекст: 03-architecture/c4-context.md
+          - C4 — контейнеры: 03-architecture/c4-container.md
+          - C4 — компоненты: 03-architecture/c4-component.md
+          - Диаграмма деплоя: 03-architecture/deployment-diagram.md
+          - Диаграммы последовательностей: 03-architecture/sequence-diagrams.md
+
+      - 04. Данные и модель БД:
+          - Предметная модель (domain model): 04-data-model/domain-model.md
+          - ER-диаграмма: 04-data-model/er-diagram.md
+          - Схема БД: 04-data-model/db-schema.md
+
+      - 05. API и контракты:
+          - Обзор API: 05-api/api-overview.md
+          - Версионирование API: 05-api/api-versioning.md
+          - OpenAPI (json/yaml): 05-api/openapi.md
+          - Ссылка на Swagger / OpenAPI: 05-api/openapi-link.md
+          - Эндпоинты InvestCalc: 05-api/endpoints-invest.md
+          - Ошибки и статус-коды: 05-api/errors-and-status-codes.md
+
+      - 06. Реализация и код:
+          - Внутренний API-flow: 06-implementation/internal-api-flow.md
+          - Архитектура кода (code structure): 06-implementation/code-structure.md
+          - Конфигурация приложения: 06-implementation/config.md
+          - Слой бизнес-логики: 06-implementation/business-logic.md
+          - Доступ к данным: 06-implementation/data-access.md
+          - Валидация данных: 06-implementation/validation.md
+          - Обработка ошибок: 06-implementation/error-handling.md
+          - Логирование: 06-implementation/logging.md
+          - Безопасность: 06-implementation/security.md
+          - Производительность и оптимизация: 06-implementation/performance.md
+          - Внутренний API (internal API): 06-implementation/api-internal.md
+
+      - 07. Тестирование:
+          - Тестовая стратегия: 07-testing/test-strategy.md
+          - План тестирования: 07-testing/test-plan.md
+          - Тестовое окружение: 07-testing/test-environment.md
+          - Тестовые данные: 07-testing/test-data.md
+          - Тест-кейсы: 07-testing/test-cases.md
+          - Регрессионный чеклист: 07-testing/regression-checklist.md
+          - Метрики качества: 07-testing/metrics.md
+          - Покрытие тестами: 07-testing/coverage.md
+          - Отчёт CI по тестам: 07-testing/ci-test-report.md
+          - Примеры баг-репортов: 07-testing/bug-report-samples.md
+
+      - 08. DevOps и эксплуатация:
+          - Docker и контейнеризация: 08-devops/docker.md
+          - CI/CD пайплайн: 08-devops/ci-cd.md
+          - Руководство по деплою: 08-devops/deployment-manual.md
+          - Healthchecks: 08-devops/healthchecks.md
+          - Логирование: 08-devops/logging.md
+          - Мониторинг: 08-devops/monitoring.md
+          - Наблюдаемость (observability): 08-devops/observability.md
+          - Масштабирование: 08-devops/scaling.md
+          - Security hardening: 08-devops/security-hardening.md
+          - Бэкапы и восстановление: 08-devops/backup-restore.md
+
+      - 09. Отчёт и презентация:
+          - Структура отчёта: 09-report/report-structure.md
+          - Шаблон отчёта: 09-report/report-template.md
+          - Чек-лист к отчёту: 09-report/report-checklist.md
+          - Структура презентации: 09-report/presentation-outline.md
+          - Презентация (черновик): 09-report/presentation.md
+          - Пример исходного отчёта: 09-report/ex-reposrt.md
+
+      - 10. Команда и вклад:
+          - Правила работы команды: 10-team/team-rules.md
+          - Матрица вкладов: 10-team/contribution-matrix.md
+          - Распределение нагрузки: 10-team/workload-split.md
+      - 11. Шаблоны документации:
+          - ADR — общий шаблон: templates/template-ADR.md
+          - ADR — API: templates/template-ADR-api.md
+          - ADR — Logging: templates/template-ADR-logging.md
+          - ADR — DevOps: templates/template-ADR-devops.md
+          - ADR — Project Structure: templates/template-ADR-project-structure.md
+          - ADR — Architecture Style: templates/template-ADR-architecture-style.md
+
+          - Архитектурный обзор (template): templates/template-architecture-overview.md
+          - C4 Model (template): templates/template-c4-model.md
+
+          - API Contract (template): templates/template-API-contract.md
+
+          - Техническое задание (ТЗ): templates/template-TZ.md
+          - User Story (template): templates/template-user-story.md
+          - Use Case (template): templates/template-use-case.md
+          - UI Prototype (template): templates/template-ui-prototype.md
+
+          - Bug Report (template): templates/template-bug-report.md
+          - Test Case (template): templates/template-test-case.md
+          - Test Plan (template): templates/template-test-plan.md
+          - Regression Checklist (template): templates/template-regression-checklist.md
+
+          - Pull Request Template: templates/template-pull-request.md
+
+          - Групповой проект — шаблон отчёта: templates/template-report-group-project.md
+          - Практика — шаблон отчёта: templates/template-report-practice.md
+          - Дневник практики (template): templates/template-diary.md

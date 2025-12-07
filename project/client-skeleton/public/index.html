@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Client Skeleton</title>
+</head>
+<body>
+    <h1>Client Skeleton</h1>
+
+    <button id="loadBtn">Загрузить items</button>
+    <ul id="itemsList"></ul>
+
+    <h2>Добавить item</h2>
+    <input id="itemId" placeholder="id" type="number" />
+    <input id="itemName" placeholder="name" />
+
+    <button id="addBtn">Добавить</button>
+<script type="module">
+    import { getItems, addItem } from "../src/api.js";
+
+    const statusEl = document.createElement("div");
+    document.body.prepend(statusEl);
+
+    function showStatus(msg) {
+        statusEl.textContent = msg;
+    }
+
+    document.getElementById("loadBtn").onclick = async () => {
+        try {
+            showStatus("Загружаю items...");
+            const items = await getItems();
+            const list = document.getElementById("itemsList");
+            list.innerHTML = "";
+            items.forEach(i => {
+                const li = document.createElement("li");
+                li.textContent = `${i.id}: ${i.name}`;
+                list.appendChild(li);
+            });
+            showStatus(`Загружено ${items.length} элементов`);
+        } catch (err) {
+            console.error(err);
+            showStatus("Ошибка: " + err.message);
+        }
+    };
+
+    document.getElementById("addBtn").onclick = async () => {
+        try {
+            const id = Number(document.getElementById("itemId").value);
+            const name = document.getElementById("itemName").value;
+
+            if (!name || !Number.isFinite(id)) {
+                alert("Заполни id (число) и name");
+                return;
+            }
+
+            showStatus("Отправляю item...");
+            const result = await addItem({ id, name });
+            alert("Создан item: " + JSON.stringify(result));
+            showStatus("Item создан, обнови список.");
+        } catch (err) {
+            console.error(err);
+            showStatus("Ошибка: " + err.message);
+        }
+    };
+</script>
+
+</body>
+</html>

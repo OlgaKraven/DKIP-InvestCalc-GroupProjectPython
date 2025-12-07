@@ -1,0 +1,81 @@
+[
+  {
+    "id": "neg-001",
+    "name": "Negative CAPEX",
+    "description": "CAPEX отрицательный, должна сработать бизнес-валидация.",
+    "created_at": "2025-12-02T14:00:00",
+    "updated_at": "2025-12-02T14:00:00",
+    "input": {
+      "project_name": "Bad CAPEX",
+      "capex": -1000,
+      "opex": 20000,
+      "effects": 50000,
+      "period_months": 24,
+      "discount_rate_percent": null
+    },
+    "last_result": null
+  },
+
+  {
+    "id": "neg-002",
+    "name": "Zero Period",
+    "description": "period_months = 0, должна вернуться ошибка периода анализа.",
+    "created_at": "2025-12-02T14:05:00",
+    "updated_at": "2025-12-02T14:05:00",
+    "input": {
+      "project_name": "Zero Period",
+      "capex": 50000,
+      "opex": 20000,
+      "effects": 90000,
+      "period_months": 0,
+      "discount_rate_percent": null
+    },
+    "last_result": null
+  },
+
+  {
+    "id": "neg-003",
+    "name": "Missing Input Field",
+    "description": "Отсутствует поле input — сценарий невалиден по структуре.",
+    "created_at": "2025-12-02T14:10:00",
+    "updated_at": "2025-12-02T14:10:00"
+  },
+
+  {
+    "id": "neg-004",
+    "name": "Wrong Type in Effects",
+    "description": "effects задан строкой, а не числом — должна сработать Pydantic-валидация.",
+    "created_at": "2025-12-02T14:15:00",
+    "updated_at": "2025-12-02T14:15:00",
+    "input": {
+      "project_name": "Wrong Effects Type",
+      "capex": 30000,
+      "opex": 15000,
+      "effects": "one hundred thousand",
+      "period_months": 12,
+      "discount_rate_percent": null
+    },
+    "last_result": null
+  },
+
+  {
+    "id": "neg-005",
+    "name": "Invalid Last Result Structure",
+    "description": "last_result не соответствует ожидаемой структуре InvestResult.",
+    "created_at": "2025-12-02T14:20:00",
+    "updated_at": "2025-12-02T14:20:00",
+    "input": {
+      "project_name": "Invalid Last Result",
+      "capex": 80000,
+      "opex": 30000,
+      "effects": 100000,
+      "period_months": 24,
+      "discount_rate_percent": null
+    },
+    "last_result": {
+      "tco": 110000,
+      "roi": "high",
+      "note": 12345
+    }
+  }
+]

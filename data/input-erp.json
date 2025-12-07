@@ -1,0 +1,8 @@
+{
+  "project_name": "ERP система (управление производством, закупками и складом)",
+  "capex": 250000,
+  "opex": 60000,
+  "effects": 380000,
+  "period_months": 48,
+  "discount_rate_percent": null
+}
