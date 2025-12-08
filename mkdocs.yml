@@ -192,30 +192,30 @@ nav:
           - Матрица вкладов: 10-team/contribution-matrix.md
           - Распределение нагрузки: 10-team/workload-split.md
       - 11. Шаблоны документации:
-          - ADR — общий шаблон: templates/template-ADR.md
-          - ADR — API: templates/template-ADR-api.md
-          - ADR — Logging: templates/template-ADR-logging.md
-          - ADR — DevOps: templates/template-ADR-devops.md
-          - ADR — Project Structure: templates/template-ADR-project-structure.md
-          - ADR — Architecture Style: templates/template-ADR-architecture-style.md
+          - ADR — общий шаблон: 11-templates/template-ADR.md
+          - ADR — API: 11-templates/template-ADR-api.md
+          - ADR — Logging: 11-templates/template-ADR-logging.md
+          - ADR — DevOps: 11-templates/template-ADR-devops.md
+          - ADR — Project Structure: 11-templates/template-ADR-project-structure.md
+          - ADR — Architecture Style: 11-templates/template-ADR-architecture-style.md
 
-          - Архитектурный обзор (template): templates/template-architecture-overview.md
-          - C4 Model (template): templates/template-c4-model.md
+          - Архитектурный обзор (template): 11-templates/template-architecture-overview.md
+          - C4 Model (template): 11-templates/template-c4-model.md
 
-          - API Contract (template): templates/template-API-contract.md
+          - API Contract (template): 11-templates/template-API-contract.md
 
-          - Техническое задание (ТЗ): templates/template-TZ.md
-          - User Story (template): templates/template-user-story.md
-          - Use Case (template): templates/template-use-case.md
-          - UI Prototype (template): templates/template-ui-prototype.md
+          - Техническое задание (ТЗ): 11-templates/template-TZ.md
+          - User Story (template): 11-templates/template-user-story.md
+          - Use Case (template): 11-templates/template-use-case.md
+          - UI Prototype (template): 11-templates/template-ui-prototype.md
 
-          - Bug Report (template): templates/template-bug-report.md
-          - Test Case (template): templates/template-test-case.md
-          - Test Plan (template): templates/template-test-plan.md
-          - Regression Checklist (template): templates/template-regression-checklist.md
+          - Bug Report (template): 11-templates/template-bug-report.md
+          - Test Case (template): 11-templates/template-test-case.md
+          - Test Plan (template): 11-templates/template-test-plan.md
+          - Regression Checklist (template): 11-templates/template-regression-checklist.md
 
-          - Pull Request Template: templates/template-pull-request.md
+          - Pull Request Template: 11-templates/template-pull-request.md
 
-          - Групповой проект — шаблон отчёта: templates/template-report-group-project.md
-          - Практика — шаблон отчёта: templates/template-report-practice.md
-          - Дневник практики (template): templates/template-diary.md
+          - Групповой проект — шаблон отчёта: 11-templates/template-report-group-project.md
+          - Практика — шаблон отчёта: 11-templates/template-report-practice.md
+          - Дневник практики (template): 11-templates/template-diary.md
