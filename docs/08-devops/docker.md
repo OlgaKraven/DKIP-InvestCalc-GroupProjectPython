@@ -1,4 +1,4 @@
-# cker для InvestCalc##  ВведениеЭтот документ описывает процессы сборки, запуска и использования Docker-образов для учебного проекта **InvestCalc**.
+# Docker для InvestCalc -  ВведениеЭтот документ описывает процессы сборки, запуска и использования Docker-образов для учебного проекта **InvestCalc**.
 В проекте используется единый образ *investcalc-api*, который автоматически публикуется в **GitHub Container Registry (GHCR)** через CI/CD.
 
 Документ предназначен для студентов, преподавателей и DevOps-специалистов, желающих развернуть InvestCalc локально или на сервере.
@@ -75,7 +75,7 @@ http://localhost:8000
 
 ## 5. Работа с GHCR (GitHub Container Registry)
 
-## 5.1. Авторизация
+### 5.1. Авторизация
 
 Если репозиторий приватный, потребуется логин:
 
@@ -87,7 +87,7 @@ echo "$GITHUB_TOKEN" | docker login ghcr.io -u <your-username> --password-stdin
 
 ---
 
-## 5.2. Загрузка образа
+### 5.2. Загрузка образа
 
 ```bash
 docker pull ghcr.io/<owner>/investcalc-api:latest
@@ -101,7 +101,7 @@ docker pull ghcr.io/OlgaKraven/investcalc-api:latest
 
 ---
 
-## 5.3. Запуск образа из GHCR
+### 5.3. Запуск образа из GHCR
 
 ```bash
 docker run --rm \
@@ -131,7 +131,7 @@ INVESTCALC_LOG_LEVEL=info
 
 ---
 
-## 6.1. Передача переменных в Docker
+### 6.1. Передача переменных в Docker
 
 ```bash
 docker run --rm \
@@ -273,15 +273,4 @@ docker history investcalc-api:local
 * Тестирование API:
   ➡️ `../07-testing/test-strategy.md`
 
----
-
-## 12. Заключение
-
-Docker-подход делает проект InvestCalc:
-
-* легко развертываемым,
-* независимым от окружения,
-* готовым для демонстрации и обучения,
-* интегрированным в современный DevOps-процесс.
-
-
+ 
