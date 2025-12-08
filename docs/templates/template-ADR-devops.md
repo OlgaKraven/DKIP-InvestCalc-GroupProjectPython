@@ -1,4 +1,4 @@
-## ADR (шаблон): DevOps и CI/CD
+# ADR (шаблон): DevOps и CI/CD
 
 Опишите:
 - выбор платформы (GitHub Actions, GitLab CI и т.д.);

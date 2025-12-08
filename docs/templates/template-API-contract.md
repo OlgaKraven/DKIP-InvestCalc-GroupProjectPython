@@ -1,9 +1,9 @@
-##  **Шаблон контракта API (API Contract Specification)**
+##  Шаблон контракта API (API Contract Specification)
 *В соответствии с REST, RFC 7231, RFC 8259, OpenAPI 3.1, ГОСТ 34/19*
 
 ---
 
-## **1. Общая информация об API**
+## 1. Общая информация об API
 
 **Название API:**
 Описание назначения, доменной области и бизнес-задачи API.
@@ -67,7 +67,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.1. GET /resource**
+### **3.1. GET /resource**
 
 **Назначение:**
 Что возвращает метод.
@@ -102,7 +102,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.2. GET /resource/{id}**
+### **3.2. GET /resource/{id}**
 
 **Назначение:**
 Вернуть элемент по ID.
@@ -130,7 +130,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.3. POST /resource**
+### **3.3. POST /resource**
 
 **Назначение:**
 Создать новый элемент.
@@ -162,7 +162,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.4. PUT /resource/{id}**
+### **3.4. PUT /resource/{id}**
 
 **Назначение:**
 Полное обновление ресурса.
@@ -182,7 +182,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.5. PATCH /resource/{id}**
+### **3.5. PATCH /resource/{id}**
 
 **Назначение:**
 Частичное обновление.
@@ -197,7 +197,7 @@ REST / JSON-only / Stateless
 
 ---
 
-## **3.6. DELETE /resource/{id}**
+### **3.6. DELETE /resource/{id}**
 
 **Response 204 No Content**
 
@@ -245,7 +245,7 @@ REST / JSON-only / Stateless
 
 ## **6. Примеры сценариев использования**
 
-## Сценарий 1 — создание расчёта
+### Сценарий 1 — создание расчёта
 
 ```
 POST /calculations
