@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cker-investcalc-docker-investcalc" class="md-skip">
+        <a href="#docker-investcalc-docker-investcalc" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -3051,9 +3051,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="5. Работа с GHCR (GitHub Container Registry)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#51" class="md-nav__link">
     <span class="md-ellipsis">
       5.1. Авторизация
@@ -3061,8 +3062,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#52" class="md-nav__link">
     <span class="md-ellipsis">
       5.2. Загрузка образа
@@ -3070,13 +3071,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#53-ghcr" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. Запуск образа из GHCR
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3087,14 +3093,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="6. Переменные окружения (.env)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#61-docker" class="md-nav__link">
     <span class="md-ellipsis">
       6.1. Передача переменных в Docker
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3174,15 +3186,6 @@
   <a href="#11" class="md-nav__link">
     <span class="md-ellipsis">
       11. Связанные документы
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Заключение
     </span>
   </a>
   
@@ -4226,9 +4229,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="5. Работа с GHCR (GitHub Container Registry)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#51" class="md-nav__link">
     <span class="md-ellipsis">
       5.1. Авторизация
@@ -4236,8 +4240,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#52" class="md-nav__link">
     <span class="md-ellipsis">
       5.2. Загрузка образа
@@ -4245,13 +4249,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#53-ghcr" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. Запуск образа из GHCR
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4262,14 +4271,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="6. Переменные окружения (.env)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#61-docker" class="md-nav__link">
     <span class="md-ellipsis">
       6.1. Передача переменных в Docker
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4354,15 +4369,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#12" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Заключение
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4378,7 +4384,7 @@
                   
 
 
-<h1 id="cker-investcalc-docker-investcalc">cker для InvestCalc##  ВведениеЭтот документ описывает процессы сборки, запуска и использования Docker-образов для учебного проекта <strong>InvestCalc</strong>.</h1>
+<h1 id="docker-investcalc-docker-investcalc">Docker для InvestCalc -  ВведениеЭтот документ описывает процессы сборки, запуска и использования Docker-образов для учебного проекта <strong>InvestCalc</strong>.</h1>
 <p>В проекте используется единый образ <em>investcalc-api</em>, который автоматически публикуется в <strong>GitHub Container Registry (GHCR)</strong> через CI/CD.</p>
 <p>Документ предназначен для студентов, преподавателей и DevOps-специалистов, желающих развернуть InvestCalc локально или на сервере.</p>
 <hr />
@@ -4428,20 +4434,20 @@ ghcr.io/OlgaKraven/investcalc-api:3a5fbb9
 </ul>
 <hr />
 <h2 id="5-ghcr-github-container-registry">5. Работа с GHCR (GitHub Container Registry)</h2>
-<h2 id="51">5.1. Авторизация</h2>
+<h3 id="51">5.1. Авторизация</h3>
 <p>Если репозиторий приватный, потребуется логин:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GITHUB_TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>ghcr.io<span class="w"> </span>-u<span class="w"> </span>&lt;your-username&gt;<span class="w"> </span>--password-stdin
 </code></pre></div>
 <p>Если репозиторий публичный — доступ возможен без логина.</p>
 <hr />
-<h2 id="52">5.2. Загрузка образа</h2>
+<h3 id="52">5.2. Загрузка образа</h3>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/&lt;owner&gt;/investcalc-api:latest
 </code></pre></div>
 <p>Например:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/OlgaKraven/investcalc-api:latest
 </code></pre></div>
 <hr />
-<h2 id="53-ghcr">5.3. Запуск образа из GHCR</h2>
+<h3 id="53-ghcr">5.3. Запуск образа из GHCR</h3>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-p<span class="w"> </span><span class="m">8000</span>:8000<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>ghcr.io/&lt;owner&gt;/investcalc-api:latest
@@ -4481,7 +4487,7 @@ INVESTCALC_LOG_LEVEL=info
 ## DATABASE_URL=postgresql://user:pass@db:5432/investcalc
 </code></pre></div>
 <hr />
-<h2 id="61-docker">6.1. Передача переменных в Docker</h2>
+<h3 id="61-docker">6.1. Передача переменных в Docker</h3>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-e<span class="w"> </span><span class="nv">INVESTCALC_ENV</span><span class="o">=</span>production<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-e<span class="w"> </span><span class="nv">INVESTCALC_LOG_LEVEL</span><span class="o">=</span>debug<span class="w"> </span><span class="se">\</span>
@@ -4576,15 +4582,6 @@ docker<span class="w"> </span>rmi<span class="w"> </span>&lt;image&gt;
 <p>Тестирование API:
   ➡️ <code>../07-testing/test-strategy.md</code></p>
 </li>
-</ul>
-<hr />
-<h2 id="12">12. Заключение</h2>
-<p>Docker-подход делает проект InvestCalc:</p>
-<ul>
-<li>легко развертываемым,</li>
-<li>независимым от окружения,</li>
-<li>готовым для демонстрации и обучения,</li>
-<li>интегрированным в современный DevOps-процесс.</li>
 </ul>
 
 

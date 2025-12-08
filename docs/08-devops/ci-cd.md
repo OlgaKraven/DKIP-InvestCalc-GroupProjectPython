@@ -241,14 +241,14 @@ docker build -t investcalc-api:local .
 
 ➡️ **[Спецификация требований](../02-requirements/requirements-spec.md)**
 
-## API
+### API
 
 ➡️ **[Обзор API](../05-api/api-overview.md)**
-## Тестирование
+### Тестирование
 
 ➡️ **[Стратегия тестирования](../07-testing/test-strategy.md)**
 
-## DevOps
+### DevOps
 
 ➡️ **[Docker](docker.md)**
 ➡️ **[Руководство по развёртыванию](deployment-manual.md)**
