@@ -4387,12 +4387,8 @@
 <pre class="mermaid"><code>flowchart TB
     subgraph DockerCompose[docker-compose.yml]
         APIContainer[investcalc-api&lt;br/&gt;FastAPI + Uvicorn]:::container
-        LogsContainer[Logging (stdout/stderr)]:::infra
+        LogsContainer[Logging stdout/stderr]:::infra
     end
-
-    classDef container fill:##d9ebff,stroke:##2e7dd1,stroke-width:1px;
-    classDef infra fill:##ebebeb,stroke:##333,stroke-width:1px;
-
     APIContainer --&gt; LogsContainer</code></pre>
 <hr />
 <h3 id="33-adr-12">3.3. Масштабирование (вариант ADR-12)</h3>
@@ -4401,16 +4397,13 @@
         API1[investcalc-api: instance 1]:::container
         API2[investcalc-api: instance 2]:::container
         API3[investcalc-api: instance 3]:::container
-        LB[(Load Balancer)]:::infra
+        LB[Load Balancer]:::infra
     end
-
     User[Пользователь] --&gt; LB
     LB --&gt; API1
     LB --&gt; API2
     LB --&gt; API3
-
-    classDef container fill:##c9e8ff,stroke:##2e7dd1;
-    classDef infra fill:##f7f7f7,stroke:##555;</code></pre>
+</code></pre>
 <p><strong>Почему это возможно?</strong>
 Сервис stateless → каждый экземпляр может обрабатывать запросы независимо.</p>
 <hr />
@@ -4527,7 +4520,7 @@
 <li>Docker Compose ≥ v2</li>
 <li>512 MB RAM (достаточно)</li>
 <li>Python ≥ 3.12 (опционально)</li>
-<li>Права на чтение каталога <code>data/</code></li>
+<li>Права на чтение каталога data/</li>
 </ul>
 
 
