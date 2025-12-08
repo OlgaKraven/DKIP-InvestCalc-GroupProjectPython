@@ -88,9 +88,9 @@ API используется:
 ```mermaid
 flowchart LR
     U[User] --> API[FastAPI /api/v1]
-    API --> Calc[calculate_all()]
-    API --> Sens[sensitivity_analysis()]
-    API --> Comp[compare_scenarios()]
+    API --> Calc[calculate_all]
+    API --> Sens[sensitivity_analysis]
+    API --> Comp[compare_scenarios]
     API --> Report[HTML Report Generator]
 ```
 
