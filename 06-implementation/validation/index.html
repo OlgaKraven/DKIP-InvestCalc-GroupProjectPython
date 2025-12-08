@@ -2722,9 +2722,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="6. Особые случаи и дополнительные проверки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#61-tco-0-roi" class="md-nav__link">
     <span class="md-ellipsis">
       6.1. TCO = 0 → особая обработка ROI
@@ -2732,8 +2733,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#62-paybackperiod" class="md-nav__link">
     <span class="md-ellipsis">
       6.2. PaybackPeriod невозможен
@@ -2741,13 +2742,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#63" class="md-nav__link">
     <span class="md-ellipsis">
       6.3. Неверный параметр чувствительности
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2758,14 +2764,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="7. Валидация в HTTP-слое (FastAPI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       Пример:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4397,9 +4409,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="6. Особые случаи и дополнительные проверки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#61-tco-0-roi" class="md-nav__link">
     <span class="md-ellipsis">
       6.1. TCO = 0 → особая обработка ROI
@@ -4407,8 +4420,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#62-paybackperiod" class="md-nav__link">
     <span class="md-ellipsis">
       6.2. PaybackPeriod невозможен
@@ -4416,13 +4429,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#63" class="md-nav__link">
     <span class="md-ellipsis">
       6.3. Неверный параметр чувствительности
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4433,14 +4451,20 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="7. Валидация в HTTP-слое (FastAPI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       Пример:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4663,19 +4687,19 @@
 </ul>
 <hr />
 <h2 id="6">6. Особые случаи и дополнительные проверки</h2>
-<h2 id="61-tco-0-roi">6.1. TCO = 0 → особая обработка ROI</h2>
+<h3 id="61-tco-0-roi">6.1. TCO = 0 → особая обработка ROI</h3>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">tco</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">input_data</span><span class="o">.</span><span class="n">effects</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mf">999.99</span>   <span class="c1">## условная &quot;очень высокая&quot; доходность</span>
     <span class="k">return</span> <span class="mf">0.0</span>
 </code></pre></div>
 <p>Это <strong>учебное допущение</strong>, задокументированное в бизнес-логике.</p>
-<h2 id="62-paybackperiod">6.2. PaybackPeriod невозможен</h2>
+<h3 id="62-paybackperiod">6.2. PaybackPeriod невозможен</h3>
 <p>Если ежемесячный денежный поток ≤ 0:</p>
 <div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Проект не окупается в рамках заданного периода...&quot;</span>
 </code></pre></div>
 <p>Выходная модель допускает отсутствие значений.</p>
-<h2 id="63">6.3. Неверный параметр чувствительности</h2>
+<h3 id="63">6.3. Неверный параметр чувствительности</h3>
 <p>Если параметр отсутствует в модели:</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">param</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">base_input_dict</span><span class="p">:</span>
     <span class="k">continue</span>   <span class="c1">## игнорируем</span>
@@ -4683,7 +4707,7 @@
 <hr />
 <h2 id="7-http-fastapi">7. Валидация в HTTP-слое (FastAPI)</h2>
 <p>Каждый эндпоинт перехватывает <code>ValueError</code>, генерируемую бизнес-логикой.</p>
-<h2 id="_2">Пример:</h2>
+<h3 id="_2">Пример:</h3>
 <div class="highlight"><pre><span></span><code><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
     <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
         <span class="n">status_code</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_422_UNPROCESSABLE_ENTITY</span><span class="p">,</span>
