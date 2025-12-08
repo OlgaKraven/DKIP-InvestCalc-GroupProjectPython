@@ -37,7 +37,7 @@ flowchart TB
 
     subgraph clientside["Клиентская сторона"]
         USER[Пользователь / UI]
-        EXT[Внешняя система (CRM/Портал)]
+        EXT[Внешняя система CRM/Портал]
     end
 
     subgraph api["API-контейнер"]

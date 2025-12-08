@@ -33,17 +33,17 @@
 ```mermaid
 flowchart LR
     subgraph Users["Пользователи"]
-        U[Пользователь<br>(Студент/Аналитик)]
+        U[Пользователь<br>Студент/Аналитик]
         T[Преподаватель / Руководитель]
     end
 
     subgraph External["Внешние системы"]
-        EXT[Внешнее приложение<br>(CRM/Учебный портал/Сервис)]
+        EXT[Внешнее приложение<br>CRM/Учебный портал/Сервис]
         CI[CI/CD Pipeline]
     end
 
     subgraph InvestCalc["InvestCalc API-сервис"]
-        SYS((InvestCalc<br/>REST API))
+        SYS[InvestCalc<br/>REST API]
     end
 
     U -->|Ввод данных,<br/>запросы расчётов| SYS

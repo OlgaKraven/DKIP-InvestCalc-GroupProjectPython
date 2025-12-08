@@ -52,7 +52,7 @@ flowchart TB
         CALC[Calculation Service<br/>TCO/ROI/Payback]
         SENS[Sensitivity Analyzer<br/>±20% вариации]
         COMP[Scenario Comparator<br/>Local vs Cloud]
-        REPORT[Report Generator<br/>HTML/PDF]<br/>(опционально)
+        REPORT[Report Generator<br/>HTML/PDF]
     end
 
     subgraph DATA["Источники данных"]

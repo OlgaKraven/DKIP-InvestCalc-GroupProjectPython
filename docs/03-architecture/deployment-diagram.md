@@ -75,12 +75,8 @@ flowchart LR
 flowchart TB
     subgraph DockerCompose[docker-compose.yml]
         APIContainer[investcalc-api<br/>FastAPI + Uvicorn]:::container
-        LogsContainer[Logging (stdout/stderr)]:::infra
+        LogsContainer[Logging stdout/stderr]:::infra
     end
-
-    classDef container fill:##d9ebff,stroke:##2e7dd1,stroke-width:1px;
-    classDef infra fill:##ebebeb,stroke:##333,stroke-width:1px;
-
     APIContainer --> LogsContainer
 ```
 
@@ -94,16 +90,13 @@ flowchart LR
         API1[investcalc-api: instance 1]:::container
         API2[investcalc-api: instance 2]:::container
         API3[investcalc-api: instance 3]:::container
-        LB[(Load Balancer)]:::infra
+        LB[Load Balancer]:::infra
     end
-
     User[Пользователь] --> LB
     LB --> API1
     LB --> API2
     LB --> API3
 
-    classDef container fill:##c9e8ff,stroke:##2e7dd1;
-    classDef infra fill:##f7f7f7,stroke:##555;
 ```
 
 **Почему это возможно?**
@@ -220,5 +213,5 @@ HTTPS не используется в учебной версии.
 * Docker Compose ≥ v2
 * 512 MB RAM (достаточно)
 * Python ≥ 3.12 (опционально)
-* Права на чтение каталога `data/`
+* Права на чтение каталога data/
  
